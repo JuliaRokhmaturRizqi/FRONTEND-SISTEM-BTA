@@ -62,3 +62,23 @@ export default {
   },
   plugins: [],
 }
+
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        // Mendaftarkan palet kustom
+        'bta-green': '#0B4A2D', // Asumsi Hex untuk Hijau Gelap pada gambar
+        'bta-yellow': '#FFD700', // Asumsi Hex untuk Kuning
+        'bta-black': '#111111',  // Hitam pekat untuk teks
+      },
+      // ... (animasi yang sebelumnya kita buat biarkan saja di sini)
+    },
+  },
+  plugins: [],
+}

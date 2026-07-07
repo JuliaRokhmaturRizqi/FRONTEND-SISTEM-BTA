@@ -1,10 +1,23 @@
 import React from 'react';
-import Login from './pages/Login';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import LandingPage from './pages/LandingPage.jsx';
+import Login from './pages/Login.jsx'; 
+import MahasiswaDashboard from './pages/MahasiswaDashboard.jsx';
 
 function App() {
   return (
-    // Memanggil komponen Login untuk ditampilkan di layar
-    <Login />
+    <BrowserRouter>
+      <Routes>
+        {/* Halaman paling awal saat web dibuka */}
+        <Route path="/" element={<LandingPage />} />
+        
+        {/* Halaman Form Login */}
+        <Route path="/login" element={<Login />} />
+        
+        {/* Halaman Khusus Mahasiswa */}
+        <Route path="/mahasiswa" element={<MahasiswaDashboard />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
